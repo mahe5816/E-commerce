@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+.val {
+	margin-top: -700px;
+	margin-left: 650px;
+	display: flex;
+	flex-direction: column;
+}
+</style>
+<body>
+	<img th:src=" @{/img/{id}(id=${pp.id })}" width=600
+		height=700>
+	<div class="val">
+		<h1>Your details are :</h1>
+		<h3>Product Id :</h3>
+		<strong th:text="${pp.id}"></strong><br>
+		<h3>Product Name :</h3>
+		<strong th:text="${pp.pname}"></strong><br>
+		<h3>Product Price :</h3>
+		<strong th:text="${pp.price}"></strong><br>
+	</div>
+</body>
+</html>
